@@ -1,0 +1,17 @@
+Flag: flag{PAIRSCANBEDECEIVING_STRUCTURELEAKSWHENREUSED}
+
+Derivation:
+The challenge "Deceptive Fairness" uses the Playfair cipher. The prompt "Is deception enough to unravel these secrets?" suggests using the key "DECEPTION" for both ciphertexts.
+
+1. Ciphertext: AKNQRPBAOTECPCFDOAHW
+   Key: DECEPTION
+   Decrypted: PAORSCANBEDECEIVINGX
+   Interpretation: "PAIRS CAN BE DECEIVING" (Correcting 'PAORS' to 'PAIRS', which makes sense in the context of Playfair pairs, and ignoring padding 'X').
+
+2. Ciphertext: UPSMPDMSTGPOSYXGCOQCMUCE
+   Key: DECEPTION
+   Decrypted: STRUCTURELEAKSWHENREUSED
+   Interpretation: "STRUCTURE LEAKS WHEN REUSED" (Perfect decryption, referring to the vulnerability of key reuse).
+
+The flag combines the two recovered secrets (with typo correction):
+flag{PAIRSCANBEDECEIVING_STRUCTURELEAKSWHENREUSED}
