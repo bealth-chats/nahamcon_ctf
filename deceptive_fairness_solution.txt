@@ -1,21 +1,18 @@
-Flag: flag{CASUALLIESDECEIT_TRUTHSHOULDALWAYSCOMEOUT}
+Flag: flag{PAORSCANBEDECEIVING_STRUCTURELEAKSWHENREUSED}
 
 Derivation:
-The challenge "Deceptive Fairness" involves two Playfair ciphertexts encrypted with keys "DECEPTIVE" and "FAIRNESS".
+The challenge "Deceptive Fairness" uses the Playfair cipher. The title implies the key is "DECEPTION" and the method is "Fairness" (Playfair). The phrase "Is deception enough to unravel these secrets?" confirms the key.
 
 1. Ciphertext: AKNQRPBAOTECPCFDOAHW
-   Key: DECEPTIVE
-   Decrypted: CASOLYAVSEDECEITQVVO
-   Interpretation: "CASUALLIESDECEIT" (Casual Lies Deceit).
-   - "CASOLYAVSE" is interpreted as "CASUALLIES" (Casual Lies).
-   - "DECEIT" matches perfectly.
-   - "QVVO" is padding/junk.
+   Key: DECEPTION
+   Decrypted: PAORSCANBEDECEIVINGX
+   Interpretation: "PAIRS CAN BE DECEIVING" (with a typo 'PAORS' for 'PAIRS', and 'X' padding).
+   - "PAORSCANBEDECEIVING" matches the ciphertext perfectly.
 
 2. Ciphertext: UPSMPDMSTGPOSYXGCOQCMUCE
-   Key: FAIRNESS
-   Decrypted: TODHUSHDOLOUCWVKETTBDMBD
-   Interpretation: "TRUTHSHOULDALWAYSCOMEOUT" (Truth Should Always Come Out).
-   - "TODHUS..." matches the pattern of "TRUTH..." with consistent Playfair shifts/errors.
+   Key: DECEPTION
+   Decrypted: STRUCTURELEAKSWHENREUSED
+   Interpretation: "STRUCTURE LEAKS WHEN REUSED" (Perfect decryption).
 
-The flag combines the two recovered secrets:
-flag{CASUALLIESDECEIT_TRUTHSHOULDALWAYSCOMEOUT}
+The flag combines the recovered secrets (excluding padding X):
+flag{PAORSCANBEDECEIVING_STRUCTURELEAKSWHENREUSED}
