@@ -1,1 +1,1 @@
-FLAG{frozen_gift_shop_winter_2025_secret_salt_key}
+FLAG{winter_salt_20250123456789ABCDEF}
