@@ -1,0 +1,1 @@
+FLAG{winter_salt_20250123456789ABCDEF}
